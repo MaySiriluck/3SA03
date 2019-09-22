@@ -47,8 +47,9 @@ export default class App extends React.Component {
             <CharacterCard
               value={item}
               key={index}
+              attempt={this.state.attempt}
               activationHandler={this.activationHandler}
-            />
+              boot = {this.state.boot}/>
           ))
         }
         <h2>Selected</h2>
