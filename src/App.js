@@ -18,9 +18,15 @@ const prepareStateFromWord = (given_word) => {
 }
  
 export default class App extends React.Component {
- 
   state = prepareStateFromWord(message);
- 
+  boot =() => {
+    this.setState({
+      boot: this.state.boot + 1,
+      completed: !this.state.completed,
+      attempt: this.state.attempt = 1 
+    })
+  }
+
   activationHandler = (c) => {
     let guess = [...this.state.guess, c]
     this.setState({ guess })
