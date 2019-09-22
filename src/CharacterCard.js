@@ -1,17 +1,17 @@
 import React from 'react';
+import { format } from 'url';
  
 export default class CharacterCard extends React.Component {
- 
     state = {
         active: false
     }
- 
     activate = () => {
         this.setState({
-            active: !this.state.active
+            active: true
         });
- 
+    if (this.state.active !== true){
         this.props.activationHandler(this.props.value);
+        }
     }
  
     render() {
