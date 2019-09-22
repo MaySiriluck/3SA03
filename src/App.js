@@ -2,7 +2,7 @@ import React from 'react';
 import CharacterCard from './CharacterCard';
 import './App.css';
 import _ from 'lodash';
- 
+
 let message = 'Hello'
  
 const prepareStateFromWord = (given_word) => {
@@ -32,7 +32,7 @@ export default class App extends React.Component {
       }
     }
   }
- 
+
   render() {
     return (
       <div>
