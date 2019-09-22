@@ -9,16 +9,16 @@ export default class CharacterCard extends React.Component {
         this.setState({
             active: true
         });
-    if (this.state.active !== false){
+    if (this.state.active !== true){
         this.props.activationHandler(this.props.value);
         }
     }
 
     componentDidUpdate = (prevProps) => {
         console.log(this.props.attempt);
-        if (prevProps.attempt === this.props.attempt ||                                      
-            prevProps.boot === this.props.boot) {
-                this.setState({ active: true })
+        if (prevProps.attempt !== this.props.attempt ||                                      
+            prevProps.boot !== this.props.boot) {
+                this.setState({ active: false })
         }
     }
 
