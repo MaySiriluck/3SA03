@@ -14,6 +14,7 @@ const prepareStateFromWord = (given_word) => {
     attempt: 1,
     guess: [],
     completed: false
+    boot: 1
   }
 }
  
