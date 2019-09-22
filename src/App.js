@@ -23,7 +23,7 @@ export default class App extends React.Component {
     this.setState({
       boot: this.state.boot + 1,
       completed: !this.state.completed,
-      attempt: this.state.attempt = 1 
+      attempt: this.state.attempt === 1 
     })
   }
 
