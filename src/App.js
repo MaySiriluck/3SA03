@@ -58,13 +58,15 @@ export default class App extends React.Component {
             <CharacterCard
               value={item}
               key={index}
-              activationHandler={this.activationHandler}
-            />
+              activationHandler={this.activationHandler}/>
           ))
         }
-        <div>Attemp {this.state.attempt}</div>
-        {
+        <div>Attemp {this.state.attempt}</div>{
+
           this.state.completed && <h4>Complete</h4>
+        }
+        {
+          this.state.completed && <button onClick={this.boot}>Reset</button>
         }
       </div>
     )
